@@ -7,13 +7,13 @@
     <title>가입하기</title>
 </head>
 <body>
-
+    <header></header>
     <!-- required 필수인지 아닌지, pattern="regx", step="2"(2단위로 숫자입력),autofocus(페이지 로드될때 자동으로 포커스), placeholder -->
     <h3>개인 정보 입력</h3>
     <table>
         <tr>
             <td>이름</td>
-            <td><input required placeholder="이름을 입력하세요" type="text"></td>
+            <td><input required placeholder="이름을 입력하세요" type="text" autofocus></td>
         </tr>
         <tr>
             <td>유저 아이디</td>
@@ -41,5 +41,6 @@
         </tr>
     </table>
     <button onclick="login.html">가입하기</button>
+    <p>계정이 이미 있나요? 로그인하기</p>
 </body>
 </html>
