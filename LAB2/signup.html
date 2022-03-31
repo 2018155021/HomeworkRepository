@@ -7,7 +7,7 @@
     <title>가입하기</title>
 </head>
 <body>
-    <header></header>
+    <div id="header"></div>
     <!-- required 필수인지 아닌지, pattern="regx", step="2"(2단위로 숫자입력),autofocus(페이지 로드될때 자동으로 포커스), placeholder -->
     <h3>개인 정보 입력</h3>
     <table>
@@ -21,11 +21,11 @@
         </tr>
         <tr>
             <td>비밀번호</td>
-            <td><input required placeholder="비밀번호를 입력하세요" type="password"></td>
+            <td><input required placeholder="비밀번호를 입력하세요" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"></td>
         </tr>
         <tr>
             <td>비밀번호 재입력</td>
-            <td><input required placeholder="비밀번호를 재입력하세요" type="password"></td>
+            <td><input required placeholder="비밀번호를 재입력하세요" type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$"></td>
         </tr>
         <tr>
             <td>생일</td>
@@ -33,7 +33,7 @@
         </tr>
         <tr>
             <td>학년</td>
-            <td><input required placeholder="학년을 입력하세요" type="number" step="1" pattern="/^[1-6]+$/"></td>
+            <td><input required placeholder="학년을 입력하세요" type="number" step="1" pattern="^[1-5]+$"></td>
         </tr>
         <tr>
             <td>전화번호</td>
@@ -41,6 +41,6 @@
         </tr>
     </table>
     <button onclick="login.html">가입하기</button>
-    <p>계정이 이미 있나요? 로그인하기</p>
+    <a class="link" href="./signup.html">계정이 이미 있나요? 로그인하기</a>
 </body>
 </html>
