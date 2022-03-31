@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href="main.css">
     <title>가입하기</title>
 </head>
 <body>
-    <h3>개인 정보 입력</h3>
+
     <!-- required 필수인지 아닌지, pattern="regx", step="2"(2단위로 숫자입력),autofocus(페이지 로드될때 자동으로 포커스), placeholder -->
+    <h3>개인 정보 입력</h3>
     <table>
         <tr>
             <td>이름</td>
@@ -31,21 +33,13 @@
         </tr>
         <tr>
             <td>학년</td>
-            <td><input required placeholder="학년을 입력하세요" type="number"></td>
+            <td><input required placeholder="학년을 입력하세요" type="number" step="1" pattern="/^[1-6]+$/"></td>
         </tr>
         <tr>
             <td>전화번호</td>
             <td><input required placeholder="010-1234-1234" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></td>
         </tr>
     </table>
-    
-    
-    
-    
-    
-    
-    
-
-    
+    <button onclick="login.html">가입하기</button>
 </body>
 </html>
