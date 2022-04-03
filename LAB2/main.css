@@ -22,16 +22,21 @@ body{
     align-items: center;
     justify-content: center;
 }
-button{
+.button{
     background-color: #509760;
     color:white;
     border: none;
     margin:10px;
     padding:10px;
     width:200px;
+    height:50px;
 }
-button:active{
+.button:active{
     opacity: 0.8;
+}
+.button_space{
+    display:flex;
+    justify-content: center;
 }
 table{
     text-align: justify;

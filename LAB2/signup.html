@@ -11,8 +11,8 @@
 </head>
 <body>
     <div id="header"></div>
-    <!-- required 필수인지 아닌지, pattern="regx", step="2"(2단위로 숫자입력),autofocus(페이지 로드될때 자동으로 포커스), placeholder -->
     <h3>개인 정보 입력</h3>
+    <form method="POST" action="http://example.com/signup">
     <table>
         <tr>
             <td>이름</td>
@@ -36,14 +36,18 @@
         </tr>
         <tr>
             <td>학년</td>
-            <td><input required placeholder="학년을 입력하세요" type="number" step="1" pattern="^[1-5]+$"></td>
+            <td><input required placeholder="학년을 입력하세요" type="number" step="1" pattern="^[1-5]+$" min="1" max="5"></td>
         </tr>
         <tr>
             <td>전화번호</td>
             <td><input required placeholder="010-1234-1234" type="tel" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></td>
         </tr>
     </table>
-    <button>가입하기</button>
+    <div class="button_space">
+    <input type="submit" value="제출" class="button">
+    <input type="reset" value="초기화" class="button">
+    </div>
+    </form>
     <a class="link" href="./login.html">계정이 이미 있나요? 로그인하기</a>
 </body>
 </html>

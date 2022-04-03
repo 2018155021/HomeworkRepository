@@ -12,6 +12,7 @@
 <body>
     <div id="header"></div>
     <h3>로그인</h3>
+    <form method="POST" action="http://example.com/login">
     <table>
         <tr>
             <td>아이디</td>
@@ -22,7 +23,10 @@
             <td><input required placeholder="비밀번호를 입력하세요" type="password"></td>
         </tr>
     </table>
-    <button>로그인</button>
+    <div class="button_space">
+    <input type="submit" value="로그인" class="button">
+    </div>
+    </form>
     <a class="link" href="./signup.html">계정이 없나요? 가입하기</a>
 </body>
 </html>
