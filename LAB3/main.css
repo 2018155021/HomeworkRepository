@@ -1,0 +1,125 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+#header{
+    background-color: #509760;
+    width:100%;
+    height:100px;
+    color: white;
+}
+#wrapper{
+    width:1020px;
+    height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y:hidden;
+    overflow-x: scroll;
+}
+@keyframes left2right {
+    0% {left: 0;}
+    100% {left: 800px;}
+    100% {left: calc(100% - 220px);}
+}
+#header_ani{
+    position: relative;
+    width:220px;
+    animation-name: left2right;
+    animation-duration:2s;
+    animation-iteration-count:2;
+    animation-direction:alternate;
+}
+#navi{
+    width:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #509760;
+}
+.menu{
+    height:20px;
+    width:100px;
+    padding: 10px 0;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.menu:hover{
+    color: #509760;
+    background-color: white;
+
+}
+#content{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.thumbbox{
+    width:310px;
+    height:400px;
+}
+.thumbnail{
+    width:300px;
+    height:390px;
+    transition: 2s ease-in-out;
+}
+.thumbnail2{
+    width:300px;
+    height:390px;
+    transition: 2s;
+}
+.thumbnail:hover{
+        width: 310px;
+        height: 400px;
+}
+.thumbnail2:hover {
+	transform: rotate( 360deg );
+}
+.link{
+    color:gray;
+    font-size:0.8em;
+}
+.link:hover{
+    text-decoration: underline;
+}
+h3{
+    margin:30px 0 10px 0;
+}
+.button{
+    background-color: #509760;
+    color:white;
+    border: none;
+    margin:10px;
+    padding:10px;
+    width:200px;
+    height:50px;
+}
+.button:active{
+    opacity: 0.8;
+}
+.button_space{
+    display:flex;
+    justify-content: center;
+}
+table{
+    text-align: justify;
+}
+td{
+    padding:10px;
+    font-size:1em;
+}
+input{
+    border:1px solid lightgray;
+    border-radius:10px;
+    width:300px;
+    height: 20px;
+    padding:10px;
+}
