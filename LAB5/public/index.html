@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>인프컬리</title>
+    <script>
+        let page=0;
+        let category="";
+        let keyword="";
+        document.addEventListener('DOMContentLoaded', load);
+        window.onscroll=()=>{
+            if(window.innerHeight+window.scrollY>=document.body.offsetHeight){
+                load();
+            }
+        };
+        function load(){
+            console.log('작동했냐?');
+            fetch(`http://localhost:8000/search?page=${page}&category=${category}&keyword=${keyword}`)
+            .then(response=>{
+                return response.json();
+            })
+            .then(products=>{
+                products.forEach(productJson => {
+                    console.log(productJson);
+                    addProduct(productJson);
+                });
+            })
+        };
+
+        function addProduct(productJson){
+            const product = document.createElement('div');
+            product.className='product';
+            //product.style.backgroundImage = `url('${productJson.image}')`; 
+            product.innerHTML=productJson.title;
+            document.querySelector('#products').append(product);
+        }
+    </script>
+</head>
+<body>
+    <div id=wrapper>
+        <nav id="navi">
+            <a class="menu" href="./index.html">
+                메인
+            </a>
+            <a class="menu" href="./signup.html">
+                회원가입
+            </a>
+            <a class="menu" href="./login.html">
+                로그인
+            </a>
+        </nav>
+            <input placeholder="제목 검색" type="text" id="keyword">
+            <select id="category" size="1">
+                <option>all</option>
+                <option>java</option>
+                <option>javascript</option>
+                <option>python</option>
+            </select>
+            <button>검색</button>
+        <div class="vertical">
+            <h3>JS 책 추천</h3>
+            <div class="horizontal" id="products">
+                <!-- <div>
+                    <img src="./img/deepdive.jpeg">
+                </div>
+                <div>
+                    <img src="./img/youdontknow.jpeg">
+                </div>
+                <div>
+                    <img src="./img/deepdive.jpeg">
+                </div>
+                <div>
+                    <img src="./img/guide.jpeg">
+                </div>
+                <div>
+                    <img src="./img/guide2.jpeg">
+                </div>
+                <div>
+                    <img src="./img/deepdive.jpeg">
+                </div>
+                <div>
+                    <img src="./img/youdontknow.jpeg">
+                </div>
+                <div>
+                    <img src="./img/deepdive.jpeg">
+                </div>
+                <div>
+                    <img src="./img/guide.jpeg">
+                </div>
+                <div>
+                    <img src="./img/guide2.jpeg">
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

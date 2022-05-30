@@ -1,0 +1,156 @@
+[
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "http://localhost:8000/img/deepdive.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/deepdive.jpeg",
+        "text": "무슨 책입니다",
+        "category": "java"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "제목",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "title": "바밤바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "java"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바누가바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    },
+    {
+        "title": "보석바",
+        "price": "10000",
+        "image": "/img/picture.png",
+        "text": "무슨 책입니다",
+        "category": "python"
+    }
+]
