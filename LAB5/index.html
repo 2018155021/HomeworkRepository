@@ -21,7 +21,7 @@
         
         function load(){
             //console.log("page:"+page+"category:"+category+"keyword:"+keyword);
-            fetch(`/search?page=${page}&category=${category}&keyword=${keyword}`)
+            fetch(`http://localhost:8000/search?page=${page}&category=${category}&keyword=${keyword}`)
             .then(response=>{
                 return response.json();
             })
