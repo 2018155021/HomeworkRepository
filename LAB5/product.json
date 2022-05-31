@@ -1,156 +1,498 @@
 [
     {
-        "title": "제목",
-        "price": "10000",
-        "image": "http://localhost:8000/img/deepdive.jpeg",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
+        "id":"0",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
         "image": "/img/deepdive.jpeg",
-        "text": "무슨 책입니다",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 v 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여 자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"1",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
+        "category": "python"
+    },
+    {
+        "id":"2",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
         "category": "java"
     },
     {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "제목",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "javascript"
-    },
-    {
-        "title": "바밤바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
+        "id":"3",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
         "category": "java"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"4",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"5",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"6",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"7",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"8",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"9",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"10",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"11",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"12",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"13",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"14",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"15",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"16",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"17",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"18",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"19",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"20",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"21",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"22",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"23",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"24",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"25",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"26",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"27",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"28",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"29",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"30",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"31",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"32",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"33",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"34",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"35",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"36",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"37",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"38",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"39",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"40",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"41",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"42",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"43",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"44",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"45",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"46",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"47",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"48",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"49",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"50",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"51",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
+        "text": "무슨 책입니다",
+        "category": "javascript"
+    },
+    {
+        "id":"52",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"53",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
+    },
+    {
+        "id":"54",
+        "title": "자바스크립트 모던 딥다이브",
+        "price": "34000",
+        "image": "/img/deepdive.jpeg",
+        "text": "자바스크립트의 기본 개념과 동작 원리에 대하여",
+        "category": "javascript"
+    },
+    {
+        "id":"55",
+        "title": "파이썬 책",
+        "price": "34000",
+        "image": "/img/pythonlogo.png",
+        "text": "파이썬의 기본 개념과 동작 원리에 대하여",
         "category": "python"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "python"
+        "id":"56",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "python"
+        "id":"57",
+        "title": "멋진 자바 책",
+        "price": "14000",
+        "image": "/img/java.jpeg",
+        "text": "멋진 자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "python"
+        "id":"58",
+        "title": "youdontknow javascript",
+        "price": "8000",
+        "image": "/img/youdontknow.jpeg",
+        "text": "유돈노 자바스크립트 입니다",
+        "category": "javascript"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"59",
+        "title": "자바스크립트 완벽 가이드 1",
+        "price": "20000",
+        "image": "/img/guide.jpeg",
         "text": "무슨 책입니다",
-        "category": "python"
+        "category": "javascript"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
+        "id":"60",
+        "title": "자바스크립트 완벽 가이드 2",
+        "price": "12000",
+        "image": "/img/guide2.jpeg",
         "text": "무슨 책입니다",
-        "category": "python"
+        "category": "javascript"
     },
     {
-        "title": "보석바누가바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "python"
-    },
-    {
-        "title": "보석바",
-        "price": "10000",
-        "image": "/img/picture.png",
-        "text": "무슨 책입니다",
-        "category": "python"
+        "id":"61",
+        "title": "자바 책",
+        "price": "34000",
+        "image": "/img/javalogo.jpeg",
+        "text": "자바의 기본 개념과 동작 원리에 대하여",
+        "category": "java"
     }
 ]

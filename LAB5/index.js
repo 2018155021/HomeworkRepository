@@ -30,7 +30,7 @@ function pageFilter(json, page) {
     if(page==0){
         return json.slice(0, 8);
     }else{
-        return json.slice(6+page*2, 8+page*2);
+        return json.slice(4+page*4, 8+page*4);
     }
 }
 
@@ -56,7 +56,6 @@ app.get("/search", function(req,res){
             const productJson=JSON.parse(product);
             filter(productJson, req.query.category, req.query.keyword, req.query.page)
             .then(response => {
-                console.log(response);
                 res.status(200).send(response);}
             )
             .catch(error => {

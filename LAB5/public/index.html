@@ -18,24 +18,55 @@
                 load();
             }
         };
+        
         function load(){
-            console.log('작동했냐?');
+            //console.log("page:"+page+"category:"+category+"keyword:"+keyword);
             fetch(`http://localhost:8000/search?page=${page}&category=${category}&keyword=${keyword}`)
             .then(response=>{
                 return response.json();
             })
             .then(products=>{
+                if(products==""){return;}
+                console.log(products);
                 products.forEach(productJson => {
-                    console.log(productJson);
                     addProduct(productJson);
                 });
+                page=page+1;
             })
         };
 
+        function search(){
+            document.querySelector('#products').innerHTML="";
+            page=0
+            load();
+        }
+        function categoryChange(value){
+            category=value;
+            search();
+        }
+        function keywordChange(value){
+            keyword=value;
+        }
+        function addExplain(id, title, img, text, price, category){
+            const explain = document.createElement('div');
+            explain.innerHTML=`
+            <div>가격</div>
+            <div>${price}</div>
+            <div>설명:</div>
+            <div>${text}</div>
+            <div>카테고리:</div>
+            <div>${category}</div>`;
+            explain.className='productEx';
+            document.querySelector('#product'+id).append(explain);
+            console.log(title,img,text,price,category);
+        }
         function addProduct(productJson){
             const product = document.createElement('div');
             product.className='product';
-            //product.style.backgroundImage = `url('${productJson.image}')`; 
+            product.id='product'+productJson.id;
+            console.log(productJson.image);
+            product.style.backgroundImage = `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('${productJson.image}')`; 
+            product.addEventListener("click", function() {addExplain(productJson.id, productJson.title, productJson.image, productJson.text, productJson.price, productJson.category);});
             product.innerHTML=productJson.title;
             document.querySelector('#products').append(product);
         }
@@ -54,48 +85,19 @@
                 로그인
             </a>
         </nav>
-            <input placeholder="제목 검색" type="text" id="keyword">
-            <select id="category" size="1">
+        <div class="searchbar">
+            <input placeholder="제목 검색" type="text" id="keyword" oninput="keywordChange(this.value)" onkeyup="if(window.event.keyCode==13){search()}" class="bar">
+            <select id="category" size="1" onchange="categoryChange(this.value)" class="bar">
                 <option>all</option>
                 <option>java</option>
                 <option>javascript</option>
                 <option>python</option>
             </select>
-            <button>검색</button>
+            <button onclick="search()" class="bar">검색</button>
+        </div>
         <div class="vertical">
             <h3>JS 책 추천</h3>
             <div class="horizontal" id="products">
-                <!-- <div>
-                    <img src="./img/deepdive.jpeg">
-                </div>
-                <div>
-                    <img src="./img/youdontknow.jpeg">
-                </div>
-                <div>
-                    <img src="./img/deepdive.jpeg">
-                </div>
-                <div>
-                    <img src="./img/guide.jpeg">
-                </div>
-                <div>
-                    <img src="./img/guide2.jpeg">
-                </div>
-                <div>
-                    <img src="./img/deepdive.jpeg">
-                </div>
-                <div>
-                    <img src="./img/youdontknow.jpeg">
-                </div>
-                <div>
-                    <img src="./img/deepdive.jpeg">
-                </div>
-                <div>
-                    <img src="./img/guide.jpeg">
-                </div>
-                <div>
-                    <img src="./img/guide2.jpeg">
-                </div> -->
-
             </div>
         </div>
     </div>
