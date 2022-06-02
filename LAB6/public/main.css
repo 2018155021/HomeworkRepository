@@ -13,9 +13,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+.show{
+    position:fixed;
+    width: 80%;
+    background-color: white;
+    border:1px solid lightgray;
+}
 #navi{
     width:100%;
-    padding-top: 10px;
+    padding-top: 100px;
 
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +44,19 @@ body{
     background-color: white;
 
 }
+.searchbar{
+    padding-top: 30px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.bar{
+    border:1px solid lightgray;
+    border-radius: 10px;
+    margin-left:10px;
+}
 .vertical{
     width:100%;
     display: flex;
@@ -54,10 +73,33 @@ body{
 .horizontal p{
     width:50%;
 }
-.horizontal img{
+.product{
+    position: relative;
     width:24%;
-    height:auto;
+    height:320px;
+    background-color: black;
+    background-size:cover;
+    color:white;
+    font-size: 1em;
+    font-weight: bold;
     margin-bottom: 10px;
+}
+.productEx{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    color:white;
+    font-weight: normal;
+    font-size: 1em;
+
+}
+.product:hover{
+    cursor: pointer;
+}
+.horizontal div img{
+    width:100%;
 }
 .link{
     color:gray;
@@ -85,6 +127,19 @@ h3{
     display:flex;
     justify-content: center;
 }
+.exDivide{
+    width:40%;
+}
+.exDivide2{
+    width:50%;
+}
+#title{
+    font-size:1.5em;
+    font-weight: bold;
+}
+#category{
+    font-weight: bold;
+}
 table{
     text-align: justify;
     width: 100%;
@@ -97,8 +152,12 @@ input{
     border:1px solid lightgray;
     border-radius:10px;
     height: 20px;
-    width: 240px;
+    max-width: 240px;
+    width: 80%;
     padding:10px;
+}
+.comment{
+    margin:20px 0;
 }
 
 @media only screen and (max-width:800px) {
@@ -109,17 +168,15 @@ input{
         flex-direction: column;
         align-items: center;
     }
-    .horizontal img{
+    .product{
         width:48%;
-        height:auto;
     }
     .horizontal p{
         width:100%;
     }
 }
 @media only screen and (max-width:480px) {
-    .horizontal img{
+    .product{
         width:100%;
-        height: auto;
     }
 }

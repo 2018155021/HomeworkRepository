@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>인프컬리</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', load);
+
+        function load(){
+            fetch(`/product/load/${location.href.split('/')[4]}`)
+            .then(response=>{
+                return response.json();
+            })
+            .then(products=>{
+                if(products==null||products==""){
+                    document.querySelector('#title').append('잘못된 접근입니다.');
+                }else{
+                    document.querySelector('#title').append(products[0].product_title);
+                    document.querySelector('#price').append(products[0].product_price);
+                    document.querySelector('#category').append(products[0].product_category);
+                    document.querySelector('#image').src=`..${products[0].product_image}`;
+                }
+            })
+        };
+    </script>
+</head>
+<body>
+    <div id=wrapper>
+        <nav id="navi">
+            <a class="menu" href="../">
+                메인
+            </a>
+            <a class="menu" href="../signup">
+                회원가입
+            </a>
+            <a class="menu" href="../login">
+                로그인
+            </a>
+        </nav>
+        <div class="vertical">
+            <div style="height:50px;"></div>
+            <div class="horizontal" id="products">
+                <div class="exDivide">
+                    <img id="image" alt="책 이미지"/>
+                </div>
+                <div class="exDivide2">
+                    <div id="title"></div>
+                    <div id="category"></div>
+                    <div id="price"></div>
+                    <p></p>
+                    <h3>후기</h3>
+                    <input/>
+                    <button class="bar">입력</button>
+                    <div id="comments">
+                        <div class="comment">좋아용</div>
+                        <div class="comment">두껍다...</div>
+                        <div class="comment">Typesciprt쓰자</div>
+                        <div class="comment">힘들어</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">과제 그만나와</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
