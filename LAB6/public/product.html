@@ -12,7 +12,12 @@
         document.addEventListener('DOMContentLoaded', load);
 
         function load(){
-            fetch(`/product/load/${location.href.split('/')[4]}`)
+            loadInfo();
+            loadComment();
+        }
+
+        function loadInfo(){
+            fetch(`/product/info/${location.href.split('/')[4]}`)
             .then(response=>{
                 return response.json();
             })
@@ -26,6 +31,48 @@
                     document.querySelector('#image').src=`..${products[0].product_image}`;
                 }
             })
+        };
+
+        function addComment(commentJson){
+            const comment = document.createElement('div');
+            comment.className='comment';
+            comment.innerHTML=commentJson.text;
+            document.querySelector('#comments').append(comment);
+        }
+
+        function loadComment(){
+            fetch(`/product/comment/${location.href.split('/')[4]}`)
+            .then(response=>{
+                return response.json();
+            })
+            .then(comments=>{
+                console.log('then2');
+                console.log(comments);
+                comments.forEach(comment => {
+                    addComment(comment);
+                });
+            })
+        };
+
+        let newComment="";
+
+        function newCommentChange(value){
+            newComment=value;
+        }
+
+        function writeComment(){
+            fetch(`/product/write`,{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    book_id: location.href.split('/')[4],
+                    text: newComment
+                })
+            })
+            .then(res=>{ alert('후기가 작성되었습니다'); window.location.reload()})
+            .catch(res=>{ console.log(res)})
         };
     </script>
 </head>
@@ -54,27 +101,10 @@
                     <div id="price"></div>
                     <p></p>
                     <h3>후기</h3>
-                    <input/>
-                    <button class="bar">입력</button>
+                    <input id="commentInput" oninput="newCommentChange(this.value)"/>
+                    <button class="bar" onclick="writeComment()">입력</button>
                     <div id="comments">
-                        <div class="comment">좋아용</div>
-                        <div class="comment">두껍다...</div>
-                        <div class="comment">Typesciprt쓰자</div>
-                        <div class="comment">힘들어</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">과제 그만나와</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
-                        <div class="comment">ㅁㄴㅇㄹㅁㄴㅇㄹ과제 그만나와ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹ</div>
+            
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const sqlite = require('sqlite');
 const app = express();
 
 const fs = require("fs");
+const { send } = require("process");
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -18,7 +19,7 @@ app.get("/login", (req, res)=>{res.sendFile(__dirname + "/public/login.html");})
 app.get("/signup", (req, res)=>{res.sendFile(__dirname + "/public/signup.html");});
 app.get("/product/:id", (req, res)=>{res.sendFile(__dirname + "/public/product.html");});
 
-app.get("/product/load/:id", async function(req, res){
+app.get("/product/info/:id", async function(req, res){
     isIdNumber=isNaN(req.params.id);
     if(req.params.id=='..undefined'||req.params.id==null||req.params.id==undefined){return res.status(400).send('파람 값이 잘못 왔어요');};
     const db = await getDBConnection();
@@ -90,6 +91,47 @@ app.get("/search", async function(req,res){
             console.log(error);
             res.status(500).send("필터링하다가 안됐어요");
     })
+})
+
+app.get("/product/comment/:id", function(req,res){
+    console.log('왜 안들어오지');
+
+    fs.readFile("comment.json", 'utf8', async function(error, comment){
+        if(error){
+            res.status(500).send("500 서버 에러! comment.json 읽다가 문제 생김");
+        }else{
+            const commentJson=JSON.parse(comment);
+            const result=commentJson.filter(comments=>comments["book_id"]==req.params.id);
+            const reverseResult = [...result].reverse();
+            console.log(reverseResult);
+            res.status(200).send(reverseResult);
+        }
+    })
+})
+
+
+app.post("/product/write", function(req,res){
+    console.log('작성요청');
+    console.log(req.body);
+    fs.readFile("comment.json", 'utf8', async function(error, comment){
+        if(error){
+            res.status(500).send("500 서버 에러! comment.json 읽다가 문제 생김");
+        }else{
+            const commentJson=JSON.parse(comment);
+            commentJson.push(req.body);
+            //console.log(commentJson);
+            const comments=JSON.stringify(commentJson);
+            //comments=comments+"";
+            fs.writeFile('comment.json',comments, function(err){
+                if (err === null) {
+                    res.status(200).send("후기가 작성되었습니다");
+                } else {
+                    res.status(200).send("후기가 작성에 문제가 생겼습니다");
+                }
+            });
+        }
+    })
+
 })
 
 const PORT = process.env.PORT || 3000;
